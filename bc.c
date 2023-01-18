@@ -596,8 +596,7 @@ size_t tokenize(char *buf, size_t buf_sz, token_t *tokens, size_t tokens_sz){
 }
 // Tokenization //
 
-
-int main(){
+int main2(){
     tree_node_t *i = CONST(0);
     i->NAME = "teste";
     i->NAME_SZ = 5;
@@ -642,7 +641,7 @@ int main1(){
     return 0;
 }
 
-int main2(){
+int main3(){
     char buf[MAX_LINE + 1];
     size_t buf_read;
 
@@ -659,8 +658,7 @@ int main2(){
         //print_node(i, 0);
 
         if (i != NULO_NODE){
-            memory = run_program(i);
-            printf("%d\n", memory);
+            printf("%d\n", run_program(i));
         }
 
         i = destroy_node(i);
